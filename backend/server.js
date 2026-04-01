@@ -4,7 +4,12 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.get("/health", (req, res) => {
-  res.json({ status: "ok", service: "vitalsync-api", timestamp: new Date().toISOString() });
+  res.json({
+    status: "ok",
+    service: "vitalsync-api",
+    uptime: process.uptime(),
+    checkedAt: new Date().toISOString()
+  });
 });
 
 app.get("/api/version", (req, res) => {
