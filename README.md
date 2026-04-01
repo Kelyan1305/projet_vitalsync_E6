@@ -75,3 +75,7 @@ Variables definies dans `.env.example`:
 - `PORT`
 
 Les secrets ne doivent jamais etre commits dans le depot.
+
+## 8. Strategie Git
+Le projet suit Gitflow avec les branches `main`, `develop` et des branches `feature/*`.
+Les commits suivent Conventional Commits pour clarifier l'historique et simplifier la revue.
