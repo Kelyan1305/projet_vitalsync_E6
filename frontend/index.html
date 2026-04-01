@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VitalSync</title>
+  <style>
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      margin: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>VitalSync - Suivi medical et sportif</h1>
+  <p id="status">Chargement...</p>
+  <script>
+    fetch("/api/health")
+      .then((response) => response.json())
+      .then((data) => {
+        document.getElementById("status").textContent = "API: " + data.status;
+      })
+      .catch(() => {
+        document.getElementById("status").textContent = "API indisponible";
+      });
+  </script>
+</body>
+</html>

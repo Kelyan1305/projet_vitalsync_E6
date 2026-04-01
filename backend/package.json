@@ -1,0 +1,19 @@
+{
+  "name": "vitalsync-api",
+  "version": "1.0.0",
+  "description": "Minimal backend API for VitalSync",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest --runInBand",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0"
+  }
+}
